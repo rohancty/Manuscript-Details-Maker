@@ -50,7 +50,9 @@ A Chrome Extension which could smoothen the process of manuscript notes taking.
 5. **Reset Form**  
    - Click **Reset** to clear all fields while preserving **Name/Date/Journal**.
      
-  <img width="3166" height="2337" alt="Sidebar Overview" src="https://github.com/user-attachments/assets/b3334b35-6e81-4e4d-b50b-ab5b3f4e61dd" />
+     <img width="3030" height="2452" alt="Sidebar Overview V2" src="https://github.com/user-attachments/assets/92436e32-68e0-487a-8268-48607bba59eb" />
+
+
 
      
 
