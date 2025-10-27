@@ -1,5 +1,5 @@
 # Manuscript-Details-Maker
-A Chrome Extension which could smoothen the process of manuscript notes taking.
+A Chrome Extension which can smoothen the process of manuscript notes taking.
 
 # **Installation**
 
