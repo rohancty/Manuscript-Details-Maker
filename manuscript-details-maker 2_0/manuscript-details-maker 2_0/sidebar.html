@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Manuscript Details Maker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="sidebar.css" />
+</head>
+<body>
+  <header>
+    <div class="master-row">
+      <label>Name <input id="masterName" type="text" placeholder="SHE name"></label>
+      <label>Date <input id="masterDate" type="text" readonly></label>
+      <label>Journal <input id="masterJournal" type="text" placeholder="Journal"></label>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="card" id="submissionChecks">
+      <div class="card-head">
+        <h2>SUBMISSION CHECKS</h2>
+        <div class="card-actions">
+          <button class="btn" id="copySubmission">Copy</button>
+          <span class="status" id="statusSubmission"></span>
+        </div>
+      </div>
+
+      <input type="hidden" class="ndjField">
+
+      <div class="field">
+        <label>Transfer</label>
+        <div class="inline-row">
+          <select id="transferOption">
+            <option value=""></option>
+            <option value="RA">RA</option>
+            <option value="Editor">Editor</option>
+            <option value="SHE/SME">SHE/SME</option>
+          </select>
+          <input id="transferText" type="text" placeholder="Additional notes">
+        </div>
+      </div>
+
+<!-- Similarity Check -->
+<div class="field">
+  <label>Similarity Check</label>
+  <div class="inline-row small">
+    <label><input type="radio" name="similarityCheck" value="✔️"> ✔️</label>
+    <input id="similarityCheckText" type="text" placeholder="Optional Note / Concerns">
+  </div>
+</div>
+
+<!-- Duplicate Score -->
+<div class="field">
+  <label>Duplicate Score</label>
+  <div class="inline-row small">
+    <label><input type="radio" name="duplicateScore" value="✔️"> ✔️</label>
+    <input id="duplicateScoreText" type="text" placeholder="Optional Note / Concerns">
+  </div>
+</div>
+
+
+      <div class="field">
+        <label>Ethical approval</label>
+        <div class="inline-row">
+          <label class="checkbox"><input type="checkbox" id="ethicalNA"> N/A</label>
+          <input id="ethicalText" type="text" placeholder="If applicable : Concerns">
+        </div>
+      </div>
+
+<!-- Scope -->
+<div class="field">
+  <label>Scope</label>
+  <div class="inline-row">
+    <select id="scopeSelect" onchange="document.getElementById('scopeText').value=this.value">
+      <option value=""></option>
+      <option value="Within scope">Within scope</option>
+      <option value="Partially within scope">Partially within scope</option>
+      <option value="Out of scope">Out of scope</option>
+    </select>
+    <input id="scopeText" type="text" placeholder="Concerns">
+  </div>
+</div>
+
+      <div class="field">
+        <label>Authorship</label>
+        <div class="inline-row small">
+          <label><input type="radio" name="authorsOrder" value="✔️"> ✔️</label>
+          <input id="authorsOrderText" type="text" placeholder="Optional Note / Concerns">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Title</label>
+        <div class="inline-row small">
+          <label><input type="radio" name="titleCheck" value="✔️"> ✔️</label>
+          <input id="titleCheckText" type="text" placeholder="Optional Note / Concerns">
+        </div>
+      </div>
+
+<!-- Graphical Abstract -->
+<div class="field">
+  <label>Graphical Abstract</label>
+  <div class="inline-row">
+    <select id="graphicalSelect" onchange="document.getElementById('graphicalText').value=this.value">
+      <option value=""></option>
+      <option value="Provided and appropriate">Provided and appropriate</option>
+      <option value="Missing">Missing</option>
+      <option value="Needs revision">Needs revision</option>
+    </select>
+    <input id="graphicalText" type="text" placeholder="Concerns">
+  </div>
+</div>
+
+<!-- Highlights -->
+<div class="field">
+  <label>Highlights</label>
+  <div class="inline-row">
+    <select id="highlightsSelect" onchange="document.getElementById('highlightsText').value=this.value">
+      <option value=""></option>
+      <option value="Provided and appropriate">Provided and appropriate</option>
+      <option value="Missing">Missing</option>
+      <option value="Needs improvement">Needs improvement</option>
+    </select>
+    <input id="highlightsText" type="text" placeholder="Concerns">
+  </div>
+</div>
+
+<!-- Figures -->
+<div class="field">
+  <label>Figures</label>
+  <div class="inline-row">
+    <select id="figuresSelect" onchange="document.getElementById('figuresText').value=this.value">
+      <option value=""></option>
+      <option value="Clear and appropriate">Clear and appropriate</option>
+      <option value="Low quality">Low quality</option>
+      <option value="Missing">Missing</option>
+    </select>
+    <input id="figuresText" type="text" placeholder="Concerns">
+  </div>
+</div>
+
+<fieldset class="extra-info">
+  <legend>Additional Statements</legend>
+
+  <div class="field">
+    <label>CREDIT statement</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="creditStatementRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="creditStatementRadio" value="❌"> ❌</label>
+      </div>
+      <input id="creditStatementText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Data availability statement</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="dataAvailabilityRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="dataAvailabilityRadio" value="❌"> ❌</label>
+      </div>
+      <input id="dataAvailabilityText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Acknowledgement</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="acknowledgementRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="acknowledgementRadio" value="❌"> ❌</label>
+      </div>
+      <input id="acknowledgementText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Funding Information</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="fundingRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="fundingRadio" value="❌"> ❌</label>
+      </div>
+      <input id="fundingText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Conflict of interest</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="conflictInterestRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="conflictInterestRadio" value="❌"> ❌</label>
+      </div>
+      <input id="conflictInterestText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Declaration of AI use</label>
+    <div class="inline-row">
+      <div class="radio-group">
+        <label><input type="radio" name="declarationAIRadio" value="✔️"> ✔️</label>
+        <label><input type="radio" name="declarationAIRadio" value="❌"> ❌</label>
+      </div>
+      <input id="declarationofAIText" type="text" placeholder="Concerns">
+    </div>
+  </div>
+</fieldset>
+
+
+	  
+	  
+      <!--CHECKBOX SECTION -->
+
+      <div class="field"><label>Potential Reviewer Expertise needed<textarea id="expertiseNeeded"></textarea></label></div>
+      <div class="field"><label>Opinion<textarea id="opinion"></textarea></label></div>
+    </section>
+
+    <section class="card" id="peerReviews">
+      <div class="card-head">
+        <h2>PEER REVIEW</h2>
+        <div class="card-actions"><button class="btn primary" id="addRound">+ Add Round</button></div>
+      </div>
+      <div id="peerRoundsContainer"></div>
+    </section>
+
+    <section class="card" id="finalDecision">
+      <div class="card-head">
+        <h2>FINAL DECISION</h2>
+        <div class="card-actions">
+          <button class="btn" id="copyFinal">Copy</button>
+          <span class="status" id="statusFinal"></span>
+        </div>
+      </div>
+      <input type="hidden" class="ndjField">
+      <div class="field"><label>Decision notes<textarea id="finalNotes"></textarea></label></div>
+    </section>
+
+    <div class="bottom-actions">
+      <button class="btn primary" id="copyAll">Copy All (combined)</button>
+      <button class="btn" id="resetAll">Reset (preserve Name/Journal/Date)</button>
+      <span class="status" id="statusAll"></span>
+    </div>
+  </main>
+  
+  <!-- Help Button -->
+<button id="helpBtn" class="btn">Help</button>
+
+<!-- Help Sidebar -->
+<div id="helpSidebar" class="help-sidebar">
+  <div class="help-header">
+      <h2>Manuscript Details Maker — Guide</h2>
+      <button id="closeHelp" class="btn small">Close ✖</button>
+    </div>
+    <div class="help-body">
+      <h3>Getting Started</h3>
+      <ul>
+        <li>Fill in <strong>SHE name</strong> and <strong>Journal</strong>. <strong>Date</strong> auto-fills each time the page loads. — these appear in all copies.</li>
+        <li>Complete the <strong>Submission Checks</strong> in order. Optional notes/Concerns can be added even if boxes aren’t checked or dropdown options unselected.</li>
+        <li><strong>Additional Statements</strong>: Tick relevant boxes or add note if there are concerns. If statements are unavailable, click ❌.</li>
+        <li><strong>Peer Review</strong>: Add rounds and reviewer details as needed.</li>
+        <li><strong>Final Decision</strong>: Write summary notes or decision comments.</li>
+      </ul>
+
+      <h3>Copying Data</h3>
+      <ul>
+        <li>Each section has its own <strong>Copy</strong> button.</li>
+        <li><strong>Copy All (combined)</strong> gathers everything (submission, reviews, decision).</li>
+        <li>A short “Copied!” message confirms success.</li>
+		<li>The boxes or section content you don't fill do not get copied.</li>		
+      </ul>
+
+      <h3>Resetting</h3>
+      <ul>
+        <li><strong>Reset (preserve Name/Journal/Date)</strong> clears all other fields.</li>
+        <li>Useful for handling multiple manuscripts for the same SHE/journal.</li>
+      </ul>
+
+      <h3>Tips</h3>
+      <ul>
+        <li>Keep notes short and factual.</li>
+        <li>Use <strong>Opinion</strong> for overall remarks.</li>
+        <li><strong>Potential Reviewer Expertise</strong> = key topics reviewers should have.</li>
+        <li>Refresh clears all data (tool doesn’t autosave).</li>
+      </ul>
+	  
+	  <p>
+ 
+      </p>
+
+<!-- Add this blank space -->	  
+	  
+    </div>
+  </div>
+</div>
+
+<script src="sidebar.js"></script>
+</body>
+</html>
