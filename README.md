@@ -40,8 +40,8 @@ A Chrome Extension which can smoothen the process of manuscript notes taking.
      - Click **+ Add Round** to add multiple rounds.  
      - Click **+ Add Reviewer** in each round to add reviewers.  
      - Fill reviewer details: **Name**, **Scopus link**, **Expertise**, **Recommendation**, **Opinion**.  
-   - **Final Decision**  
-     - Add decision notes.
+   - **Decision**  
+     - Add decision notes based on whether it's an interim or final decision.
 
 4. **Copy Sections**  
    - Click **Copy** button for each section to copy it individually.  
@@ -53,8 +53,8 @@ A Chrome Extension which can smoothen the process of manuscript notes taking.
 6. **Help button**  
    - Click **Help** located at the end of the sidebar to access the guide and tips. 
      
+<img width="741" height="2367" alt="Sidebar Overview V2" src="https://github.com/user-attachments/assets/80f02862-0427-4560-978d-3a2cf25460ad" />
 
-<img width="715" height="2317" alt="Sidebar Overview V2" src="https://github.com/user-attachments/assets/ab6f19dd-761c-4817-b3f7-89159cd165ac" />
 
 
 
