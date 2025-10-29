@@ -1,25 +1,17 @@
 # Manuscript-Details-Maker
 A Chrome Extension which can smoothen the process of manuscript notes taking.
 
-# **Installation**
+# **Instructions**
 
-1. **Unzip the manuscript-details-maker file**  
-   - Ensure you have all the files in one folder.
-
-2. **Open Chrome Extensions**  
-   - Open Chrome.  
-   - Navigate to `chrome://extensions/`.
-
-3. **Enable Developer Mode**  
-   - Toggle **Developer Mode** ON (top-right corner).
-
-4. **Load Unpacked Extension**  
-   - Click **"Load unpacked"**.  
-   - Select the folder containing your extension files.
-
-5. **Confirm Installation**  
-   - You should now see the extension icon in the Chrome toolbar.  
-   - You can pin it.
+1. **Download and unzip** the `manuscript-details-maker 2_0` file.  
+2. **Open Chrome** and go to `chrome://extensions/`.  
+3. **Turn on Developer mode** (top-right corner).  
+4. Click **Load unpacked**.  
+5. Select the unzipped folder.  
+   - The extension will appear in your extensions list.  
+6. **Pin it to your toolbar.**  
+   - Click the pin icon to keep it visible.  
+7. **Right-click the icon** and select **Open Side Panel**.  
 
 ---
 
